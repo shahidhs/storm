@@ -61,9 +61,7 @@ before_install:
 
 install: /bin/bash ./dev-tools/travis/travis-install.sh `pwd`
 script:
-  - if [[ $(uname -m) != 's390x' ]]; then 
-      /bin/bash ./dev-tools/travis/travis-script.sh `pwd` $MODULES;
-    fi
+  - /bin/bash ./dev-tools/travis/travis-script.sh `pwd` $MODULES
 cache:
   directories:
     - "$HOME/.m2/repository"
